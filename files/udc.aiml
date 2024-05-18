@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml>
+  <category>
+    <pattern>HELLO</pattern>
+    <template>Hello! How can I help?
+        <button>
+            <text>Help me find a job I like!</text>
+            <postback>strengths</postback>
+        </button>
+        <button>
+            <text>Know any good CS jobs?</text>
+            <postback>rando</postback>
+        </button>
+    </template>
+  </category>
+  <category>
+    <pattern>hi</pattern>
+    <template><srai>hello</srai></template>
+  </category>
+  <category>
+    <pattern>start ^</pattern>
+    <template><srai>hello</srai></template>
+  </category>
+  
+  
+  <category>
+      <pattern>STRENGTHS</pattern>
+      <template>What are your strengths?
+        <button>
+            <text>Coding</text>
+            <postback>coding</postback>
+        </button>
+        <button>
+            <text>Security</text>
+            <postback>secure</postback>
+        </button>
+        <button>
+            <text>Big Data</text>
+            <postback>ai</postback>
+        </button>
+        <button>
+            <text>Art</text>
+            <postback>video</postback>
+        </button>
+      </template>
+  </category>
+  
+  <category>
+      <pattern>coding</pattern>
+      <template>Which languages do you prefer:
+        <button>
+            <text>C++, Java, Python</text>
+            <postback>sdev</postback>
+        </button>
+        <button>
+            <text>HTML, CSS, Javascript</text>
+            <postback>wdev</postback>
+        </button>
+      </template>
+  </category>
+  
+  
+  
+  <category>
+      <pattern>RANDO</pattern>
+      <template>Here are 5 good CS jobs! Choose one!
+          <button>
+              <text>Software Developer</text>
+              <postback>sdev</postback>
+          </button>
+          <button>
+              <text>Web Developer</text>
+              <postback>wdev</postback>
+          </button>
+          <button>
+              <text>Information Security Analyst</text>
+              <postback>secure</postback>
+          </button>
+          <button>
+              <text>AI Engineer</text>
+              <postback>ai</postback>
+          </button>
+          <button>
+              <text>Video Game Developer</text>
+              <postback>video</postback>
+          </button>
+      </template>
+  </category>
+  
+  
+  <category>
+      <pattern>sdev</pattern>
+      <template>
+          <card>
+              <image>https://ncube.com/wp-content/uploads/2020/02/Top-8-Software-Development-Models.jpg</image>
+              <title>Consider Software Development!</title>
+              <button>
+                  <text>Learn more!</text>
+                  <url>https://www.devry.edu/blog/what-does-a-software-developer-do.html</url>
+              </button>
+              <button>
+                  <text>Find a Job!</text>
+                  <url>https://www.indeed.com/jobs?q=Software+Developer</url>
+              </button>
+          </card>
+      </template>
+  </category>
+  <category>
+      <pattern>wdev</pattern>
+      <template>
+          <card>
+              <image>https://cdn.sanity.io/images/tlr8oxjg/production/d2f16531bde974464ad7ab74dc335790dbdebffa-1192x668.png</image>
+              <title>Consider Web Development!</title>
+              <button>
+                  <text>Learn more!</text>
+                  <url>https://www.coursera.org/articles/web-developer</url>
+              </button>
+              <button>
+                  <text>Find a Job!</text>
+                  <url>https://www.indeed.com/jobs?q=Web+Developer</url>
+              </button>
+          </card>
+      </template>
+  </category>
+  <category>
+      <pattern>secure</pattern>
+      <template>
+          <card>
+              <image>https://d372kicx7ya6yg.cloudfront.net/upload/content/articles/main/gtn_mitm_top-10-threats_hero.jpg</image>
+              <title>Consider Information Security!</title>
+              <button>
+                  <text>Learn More!</text>
+                  <url>https://coursera.org/share/d55ebf1e045a36e19bd8817c298b3fc7</url>
+              </button>
+              <button>
+                  <text>Find an Job!</text>
+                  <url>https://www.indeed.com/jobs?q=Information+Security+Analyst</url>
+              </button>
+          </card>
+      </template>
+  </category>
+  <category>
+      <pattern>ai</pattern>
+      <template>
+          <card>
+              <image>https://www.inteliment.com/wp-content/uploads/2021/05/44-The-Real-Skills-to-Become-an-Artificial-Intelligence-Engineer-1.jpg</image>
+              <title>Consider AI Engineering!</title>
+              <button>
+                  <text>Learn more!</text>
+                  <url>https://www.coursera.org/articles/ai-engineer</url>
+              </button>
+              <button>
+                  <text>Find a Job!</text>
+                  <url>https://www.indeed.com/jobs?q=AI+Engineer</url>
+              </button>
+          </card>
+      </template>
+  </category>
+  <category>
+      <pattern>video</pattern>
+      <template>
+          <card>
+              <image>https://www.shutterstock.com/shutterstock/videos/1108701643/thumb/10.jpg?ip=x480</image>
+              <title>Consider Video Game Development!</title>
+              <button>
+                  <text>Learn more!</text>
+                  <url>https://www.coursera.org/articles/game-developer</url>
+              </button>
+              <button>
+                  <text>Find a Job!</text>
+                  <url>https://www.indeed.com/jobs?q=Video+Game+Developer</url>
+              </button>
+          </card>
+      </template>
+  </category>
+  
+  
+  <category>
+    <pattern>*</pattern>
+    <template>Dang, I don't know how to help with that!</template>
+  </category>
+  
+</aiml>
