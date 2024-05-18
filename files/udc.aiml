@@ -180,4 +180,8 @@
     <template>Dang, I don't know how to help with that!</template>
   </category>
   
+<category>
+    <pattern></pattern>
+    <template></template>
+</category>
 </aiml>
